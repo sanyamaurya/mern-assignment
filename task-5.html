@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-2xl p-6 bg-white border border-gray-300">
+        <h1 class="text-2xl font-bold text-center text-blue-700 mb-4">Registration form</h1>
+        <form>
+            <table class="w-full border-collapse border border-gray-400">
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">First Name</td>
+                    <td class="border border-gray-400 p-2"><input type="text" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Last Name</td>
+                    <td class="border border-gray-400 p-2"><input type="text" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Email</td>
+                    <td class="border border-gray-400 p-2"><input type="email" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Password</td>
+                    <td class="border border-gray-400 p-2"><input type="password" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Re-enter Password</td>
+                    <td class="border border-gray-400 p-2"><input type="password" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Gender:</td>
+                    <td class="border border-gray-400 p-2">
+                        <input type="radio" name="gender" value="male" class="mr-2"> Male
+                        <input type="radio" name="gender" value="female" class="ml-4 mr-2"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Age:</td>
+                    <td class="border border-gray-400 p-2"><input type="number" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Phone Number</td>
+                    <td class="border border-gray-400 p-2"><input type="tel" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Address</td>
+                    <td class="border border-gray-400 p-2"><textarea class="w-full border-none h-24"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">State</td>
+                    <td class="border border-gray-400 p-2"><input type="text" class="w-full border-none"></td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Country</td>
+                    <td class="border border-gray-400 p-2">
+                        <select class="w-full border-none">
+                            <option>Choose your country</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 p-2 font-bold">Languages known</td>
+                    <td class="border border-gray-400 p-2">
+                        <input type="checkbox" class="mr-2"> English
+                        <input type="checkbox" class="ml-4 mr-2"> Kannada
+                        <input type="checkbox" class="ml-4 mr-2"> Hindi
+                        <input type="checkbox" class="ml-4 mr-2"> Telugu
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="border border-gray-400 p-2">
+                        <input type="checkbox" class="mr-2"> 
+                        <span>Hereby I declare all the given details are true</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="border border-gray-400 p-2 text-center">
+                        <button type="submit" class="px-4 py-2 bg-gray-300 border border-gray-400">Register</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="border border-gray-400 p-2 text-right">
+                        <a href="#" class="text-blue-700">Log in to <span class="underline">Ethnus</span> website</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

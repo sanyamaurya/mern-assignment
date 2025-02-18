@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    border: 1px solid black;
+    padding: 16px;
+    background-color: white;
+    display: flex;
+}
+
+/* Side Navigation */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
+
+.sidenav div {
+    width: 48px;
+    height: 48px;
+    transition: background-color 0.3s;
+}
+
+/* Button Colors */
+.sidenav .green {
+    background-color: #10b981;
+}
+.sidenav .green:hover {
+    background-color: #047857;
+}
+
+.sidenav .blue {
+    background-color: #3b82f6;
+}
+.sidenav .blue:hover {
+    background-color: #1e40af;
+}
+
+.sidenav .red {
+    background-color: #ef4444;
+}
+.sidenav .red:hover {
+    background-color: #b91c1c;
+}
+
+.sidenav .gray {
+    background-color: #6b7280;
+}
+.sidenav .gray:hover {
+    background-color: #374151;
+}
+
+/* Content */
+.content {
+    padding: 32px;
+}
+
+.content h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content p {
+    margin-top: 8px;
+}

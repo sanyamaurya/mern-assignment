@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes moveTrain {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100vw); }
+        }
+        .animate-train {
+            animation: moveTrain 5s linear infinite;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-white">
+    <div class="flex flex-col items-center">
+        <img id="train" src="https://thumbs.dreamstime.com/b/train-27907878.jpg" alt="A green train with smoke coming out of its chimney" class="mb-4" width="300" height="200"/>
+        <p class="text-xl font-bold text-blue-800 mb-4">Click the following buttons to handle animation</p>
+        <div class="flex space-x-2">
+            <button onclick="startAnimation()" class="px-4 py-2 border border-gray-400 rounded">Start</button>
+            <button onclick="stopAnimation()" class="px-4 py-2 border border-gray-400 rounded">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        function startAnimation() {
+            document.getElementById('train').classList.add('animate-train');
+        }
+
+        function stopAnimation() {
+            document.getElementById('train').classList.remove('animate-train');
+        }
+    </script>
+</body>
+</html>

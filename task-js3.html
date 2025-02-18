@@ -1,0 +1,42 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function calculate(operation) {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            let result;
+
+            if (operation === 'multiply') {
+                result = firstNumber * secondNumber;
+            } else if (operation === 'divide') {
+                result = firstNumber / secondNumber;
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="border p-4 bg-white shadow-md">
+        <div class="mb-4 flex items-center">
+            <label for="firstNumber" class="text-lg font-semibold mr-2">1st Number :</label>
+            <input type="text" id="firstNumber" value="12" class="border border-gray-300 p-2 w-32">
+        </div>
+        <div class="mb-4 flex items-center">
+            <label for="secondNumber" class="text-lg font-semibold mr-2">2nd Number:</label>
+            <input type="text" id="secondNumber" value="10" class="border border-gray-300 p-2 w-32">
+        </div>
+        <div class="mb-4 flex space-x-2">
+            <button onclick="calculate('multiply')" class="bg-blue-500 text-white px-4 py-2 rounded">Multiply</button>
+            <button onclick="calculate('divide')" class="bg-gray-300 text-black px-4 py-2 rounded">Divide</button>
+        </div>
+        <div class="text-lg font-semibold">
+            The Result Is :
+        </div>
+        <div id="result" class="text-2xl font-bold">
+            120
+        </div>
+    </div>
+</body>
+</html>

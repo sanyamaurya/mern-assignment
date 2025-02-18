@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #268d78;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    background-color: #21b093; /* Light blue background */
+    border: 1px solid black; /* Black border */
+    border-radius: 20px; /* Oval shape */
+    background-clip: padding-box; /* Ensures the border color is visible */
+}
+
+.shapes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
+    margin: 10px;
+    justify-content: center; 
+}
+
+.shape {
+    border: 2px solid limegreen; /* Green border */
+    background: white; /* White background */
+}
+
+.rectangle {
+    width: 100px;
+    height: 90px;
+    border-radius: 10px;
+
+}
+.rectangle1 {
+    width: 100px;
+    height: 90px;
+    border-radius: 15px;
+
+}
+.rectangle2 {
+    width: 100px;
+    height: 90px;
+    border-radius: 20px;
+
+}
+.rectangle3 {
+    width: 100px;
+    height: 90px;
+    border-radius: 2px;
+
+}
+.rectangle4 {
+    width: 100px;
+    height: 90px;
+    border-radius: 35px;
+
+}
+.square {
+    width: 100px;
+    height: 90px;
+    border-radius: 3px;
+}
+.rectangle5 {
+    width: 120px;
+    height: 60px;
+    border-radius: 0 20px 0 20px; 
+}
+
+.oval {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px; 
+}

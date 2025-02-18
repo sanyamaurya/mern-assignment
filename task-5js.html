@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK-5</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        input, textarea {
+            border: 3px solid #e10b0b;
+            padding: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+            width: 200px;
+        }
+        input.error, textarea.error {
+            border: 1px solid red;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        label {
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex;
+            margin-top: 10px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <span class="error" id="nameError">This field is required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+            <span class="error" id="emailError">A valid email address is required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <input type="text" id="website">
+            <span class="error" id="websiteError">A valid url is required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4"></textarea>
+            <span class="error" id="messageError">This field is required</span>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            // Clear previous error messages
+            const errorElements = document.querySelectorAll(".error");
+            errorElements.forEach((el) => {
+                el.style.display = "none";
+            });
+
+            // Validation for name
+            const name = document.getElementById("name").value;
+            if (!name) {
+                isValid = false;
+                document.getElementById("nameError").style.display = "inline";
+                document.getElementById("name").classList.add("error");
+            }
+
+            // Validation for email
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+            if (!email || !email.match(emailPattern)) {
+                isValid = false;
+                document.getElementById("emailError").style.display = "inline";
+                document.getElementById("email").classList.add("error");
+            }
+
+            // Validation for website
+            const website = document.getElementById("website").value;
+            const urlPattern = /^(http|https):\/\/[^ "]+$/;
+            if (!website || !website.match(urlPattern)) {
+                isValid = false;
+                document.getElementById("websiteError").style.display = "inline";
+                document.getElementById("website").classList.add("error");
+            }
+
+            // Validation for message
+            const message = document.getElementById("message").value;
+            if (!message) {
+                isValid = false;
+                document.getElementById("messageError").style.display = "inline";
+                document.getElementById("message").classList.add("error");
+            }
+
+            // If valid, you can submit the form or further process it
+            if (isValid) {
+                alert("Form submitted successfully!");
+                // Here you can write logic to handle the form submission
+                // For example, using `fetch` to send the data to a server
+            }
+        });
+    </script>
+</body>
+</html>

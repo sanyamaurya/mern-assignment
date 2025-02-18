@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Reverse a Number</h1>
+        <input id="numberInput" type="number" class="border p-2 w-full mb-4" placeholder="Enter a number">
+        <button onclick="reverseNumber()" class="bg-blue-500 text-white px-4 py-2 rounded">Reverse</button>
+        <p id="result" class="mt-4 text-lg"></p>
+    </div>
+
+    <script>
+        function reverseNumber() {
+            const numberInput = document.getElementById('numberInput').value;
+            const reversedNumber = numberInput.split('').reverse().join('');
+            document.getElementById('result').innerText = ReversedNumber ; '${reversedNumber}';
+        }
+    </script>
+</body>
+</html>

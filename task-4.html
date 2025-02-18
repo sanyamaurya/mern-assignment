@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            display: flex; /* Use flexbox for horizontal alignment */
+            align-items: center; /* Center items vertically */
+            margin: 10px 0; /* Space between form groups */
+            font-weight: bold;
+        }
+        label {
+            width: 150px; /* Fixed width for labels */
+            margin-right: 10px; /* Space between label and input */
+        }
+        input, select {
+            width: 200px; /* Width for input and select elements */
+            padding: 5px; /* Padding for input and select elements */
+        }
+        button {
+            margin-top: 10px; /* Space above the button */
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" value="Vincent Maverick Durano">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="Vinz">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="********">
+        </div>
+
+        <div class="form-group">
+            <label for="rePassword">Re Password:</label>
+            <input type="password" id="rePassword" name="rePassword" value="********">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" value="Cebu, Philippines">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="22">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+</html>

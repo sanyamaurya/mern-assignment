@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TASK-2</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero-section img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero-text h1, .hero-text h2 {
+            margin: 0;
+        }
+        .service-icon {
+            font-size: 4rem;
+            color: #FFC107;
+        }
+        .service-box {
+            background-color: #10355a;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-warning text-white py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="h2 font-weight-bold">Builderz</div>
+            <div class="d-flex">
+                <div class="d-flex align-items-center mr-4">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>Mon - Fri, 8:00 - 9:00</span>
+                </div>
+                <div class="d-flex align-items-center mr-4">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+012 345 6789</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>info@example.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">TEAM</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PROJECT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">PAGES</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+            </ul>
+            <a class="btn btn-warning text-dark" href="#">Get A Quote</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="https://storage.googleapis.com/a1aa/image/l__b0P43a1ESdTJEto2ruyWJV_Em0laDYBVQAUEVZSI.jpg" alt="Construction workers looking at a blueprint on a construction site">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1 class="display-4 font-weight-bold">We Are Professional</h1>
+            <h2 class="display-4 font-weight-bold">For Your Dream Project</h2>
+            <a class="btn btn-outline-light mt-4" href="#">GET A QUOTE</a>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-user-tie service-icon mb-3"></i>
+                        <h3 class="h4 font-weight-bold">Expert Worker</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-tools service-icon mb-3"></i>
+                        <h3 class="h4 font-weight-bold">Quality Work</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-headset service-icon mb-3"></i>
+                        <h3 class="h4 font-weight-bold">24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

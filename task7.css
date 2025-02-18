@@ -1,0 +1,87 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Outer Container (Purple Border Around the Box) */
+.outer-container {
+    background-color: #a1063f; /* Background inside border */
+    width: 800px; /* Square shape */
+    height: 600px; /* Square shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border: 45px solid #a1063f; /* Added Purple Border */
+}
+
+/* Inner Form Container */
+.container {
+    background-color: #760631; /* Darker Purple */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+/* Label Styling */
+label {
+    color: white;
+    font-weight: bold;
+}
+
+/* Form Group (For Labels and Fields) */
+.form-group {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 50%;
+    padding: 5px;
+    margin-left: 50px; /* Space between label and input */
+    border-radius: 5px;
+    border: 1px solid #0b0b0b;
+    display: block;
+}
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+/* Submit Button */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px;
+    width: 100%;
+    background-color: hsl(210, 33%, 96%);
+    color: rgb(16, 15, 15);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

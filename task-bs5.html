@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS TASK-5</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.75rem;
+            display: block;
+            margin-top: 5px;
+        }
+        .error-border {
+            border-color: red !important;
+        }
+        .error-icon {
+            color: red !important;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            const fields = [
+                { id: 'first-name', message: 'Please supply your first name' },
+                { id: 'last-name', message: 'Please supply your last name' },
+                { id: 'email', message: 'Please supply your email' },
+                { id: 'phone', message: 'Please supply your phone number' },
+                { id: 'address', message: 'Please supply your address' },
+                { id: 'city', message: 'Please supply your city' },
+                { id: 'state', message: 'Please select your state' },
+                { id: 'project-description', message: 'Please supply your project description' }
+            ];
+
+            fields.forEach(field => {
+                const input = document.getElementById(field.id);
+                const inputGroup = input.closest(".input-group");
+                const icon = inputGroup ? inputGroup.querySelector(".input-group-text i") : null;
+                const errorMessage = input.closest(".position-relative").querySelector(".error-message");
+
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error-border');
+                    if (icon) icon.classList.add('error-icon');
+                    errorMessage.textContent = field.message;
+                } else {
+                    input.classList.remove('error-border');
+                    if (icon) icon.classList.remove('error-icon');
+                    errorMessage.textContent = '';
+                }
+            });
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+            }
+        }
+    </script>
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100">
+    <div class="bg-white p-5 rounded-lg shadow-lg w-100" style="max-width: 600px;">
+        <form onsubmit="validateForm(event)">
+            <div class="form-group row align-items-center">
+                <label for="first-name" class="col-sm-4 col-form-label text-right">First Name</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="last-name" class="col-sm-4 col-form-label text-right">Last Name</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="email" class="col-sm-4 col-form-label text-right">E-Mail</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="email" placeholder="E-Mail Address">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="phone" class="col-sm-4 col-form-label text-right">Phone #</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="phone" placeholder="(845)555-1212">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="address" class="col-sm-4 col-form-label text-right">Address</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-home"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="address" placeholder="Address">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="city" class="col-sm-4 col-form-label text-right">City</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-city"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row align-items-center">
+                <label for="project-description" class="col-sm-4 col-form-label text-right">Project Description</label>
+                <div class="col-sm-8 position-relative">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
+                        </div>
+                        <textarea class="form-control" id="project-description" placeholder="Project Description"></textarea>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <button type="submit" class="btn btn-warning text-white font-weight-bold">
+                    <span>Send</span>
+                    <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

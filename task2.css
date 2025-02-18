@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+/* Title styles */
+.nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Flex container to position Vertical and Horizontal navs */
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Align items from left */
+    align-items: center; /* Align Horizontal Nav at lower right */
+    gap: 40px; /* Space between vertical and horizontal navs */
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+/* Common outer box styling */
+.nav-container {
+    padding: 15px;
+    border: 3px solid black; /* Extra outer border */
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Vertical Navigation Bar Styles */
+.vertical-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-nav {
+    width: 200px;
+    background-color: #87CEEB;
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+.vertical-nav h3 {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 10px -10px;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}
+
+.vertical-nav a {
+    display: block;
+    color: blue;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.vertical-nav a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Horizontal Navigation Bar Styles */
+.horizontal-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right */
+    margin-bottom: -40px; /* Move slightly up */
+}
+
+.horizontal-nav {
+    background-color: #DCDCDC;
+    border: 2px solid #000;
+    padding: 10px;
+    display: inline-block;
+}
+
+.horizontal-nav a {
+    color: blue;
+    padding: 10px 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+.horizontal-nav a:not(:last-child)::after {
+    content: "|"; /* Separator line */
+    color: black;
+    margin-left: 10px;
+}
+
+.horizontal-nav a:hover {
+    background-color: #f1f1f1;
+}

@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.company-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.company-table th, .company-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.company-table thead th {
+    background-color: #2c8a50;
+    color: white;
+}
+
+.company-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

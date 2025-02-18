@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div class="mb-8 text-center">
+        <button id="showDateBtn" class="px-4 py-2 bg-gray-500 text-white rounded">Show Date</button>
+        <div id="dateDisplay" class="mt-2 min-h-[24px]"></div>
+    </div>
+    <div class="text-center">
+        <button id="showTimeBtn" class="px-4 py-2 bg-gray-500 text-white rounded">Show Time</button>
+        <div id="timeDisplay" class="mt-2 min-h-[24px]"></div>
+    </div>
+
+    <script>
+        document.getElementById('showDateBtn').addEventListener('click', function() {
+            const date = new Date();
+            const formattedDate = `${date.getDate()}/${date.toLocaleString('default', { month: 'long' })}/${date.getFullYear()}`;
+            document.getElementById('dateDisplay').innerText = formattedDate;
+        });
+
+        document.getElementById('showTimeBtn').addEventListener('click', function() {
+            const time = new Date();
+            const formattedTime = time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+            document.getElementById('timeDisplay').innerText = formattedTime;
+        });
+    </script>
+</body>
+</html>
